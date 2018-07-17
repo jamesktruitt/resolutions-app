@@ -77,4 +77,10 @@ For this project, I built a full-stack app using the following technologies:
 
 1. imports > startup > server > `touch index.js`
 
-1. apollo > server > `touch init.js` and `console.log('hi')` in startup > server > index.js
+1. apollo > server > `touch init.js` and import startup > server > index.js file 
+
+1. `console.log('hi')` in imports > startup > server > index.js *(makes sure your wired up)*
+
+1. then replace console log with the following:
+
+   ![React Meteor App](/polacode/5-create-apollo-server.png 'Import Apollo server')
