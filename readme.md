@@ -69,7 +69,7 @@ For this project, I built a full-stack app using the following technologies:
 
     ![React Meteor App](/polacode/4-import-ui-app-component.png 'React/Meteor import code')
 
-### Creating A GraphQL/Apollo Server To Our App
+### Adding Apollo-GraphQL Server To Meteor App
 
 1. Install the following dependencies `apollo-client` `body-parser` `express` `graphql` `graphql-tools` `graphql-server-express`
 
@@ -82,3 +82,29 @@ For this project, I built a full-stack app using the following technologies:
 1. Replace console log with the following to create an apollo server inside your meteor app:
 
     ![React Meteor App](/polacode/5-create-apollo-server.png 'Import Apollo server')
+
+### Creating First GraphQL Schema & GraphQL Query
+
+1. Head to your browser and in the address bar type `localhost:3000/graphiql` *(here you can see and test your data, similar to Postman)*
+
+1. In apollo > server > index.js write your type of query, the query method, and the actual schema code
+
+1. Pass the schema variable as an argument to your Apollo server function
+
+    ![React Meteor App](/polacode/6-graphql-schema-query.png 'Schema and Query')
+
+### Connecting Apollo to React & Apollo Devtools
+
+1. Install `graphql-tag` `react-apollo` `apollo-client-preset` in apollo > client > index.js
+
+1. Import `ApolloClient`, `HttpLink`, and `InMemoryCache`
+
+1. Create a new Meteor client connection, this essentially connects your app to a new graphql application
+    * Create a new httpLink with a property of uri (which is the graphql server)
+    * Create a cache variable
+    * Create a client variable
+
+1. Import ApolloProvider from react-apollo package
+    * Create a new react component called ApolloApp
+
+Now our application is aware of our Apollo server
